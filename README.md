@@ -46,7 +46,7 @@ for compiling _wasm_ in binary format from a cpp file.
     I choose to convert it on server side and then send as JSON to client.  
     To launch your wasm you need to use _Wasm.instantiateModule()_ funcion which has following signature:
 
-        var module = Wasm.instantiateModule(wasmBinAsArr, gloabals).exports;
+            var module = Wasm.instantiateModule(wasmBinAsArr, gloabals).exports;
 
     - module - Instance of wasm binary.
     - Wasm - Gloabal variable to access wasm implemetation.
@@ -54,4 +54,5 @@ for compiling _wasm_ in binary format from a cpp file.
     - globals - Object which contains mapped global variables and functions to use within module.
 
 Now you will be able to try this new and promising technology by yourself. Good luck and intresting expirements!
+
 PS. My own example of wasm loading application you can find in app directory, thank you.
