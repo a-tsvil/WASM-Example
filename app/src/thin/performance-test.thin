@@ -1,0 +1,48 @@
+declare function print(text: string): void;
+
+class Link {
+  value: int;
+  next: Link;
+}
+
+class List {
+  first: Link;
+  last: Link;
+
+  append(value: int): void {
+    var link = new Link();
+    link.value = value;
+
+    // Append the new link to the end of the chain
+    if (this.first == null) this.first = link;
+    else this.last.next = link;
+    this.last = link;
+  }
+}
+
+extern function demo(): int {
+  var list = new List();
+  var count = 1500000;
+  var index = 0;
+  var takes = 5000;
+  var attempt = 0;
+
+  while(attempt < takes) {
+      while(index < count) {
+          list.append(index);
+          index = index + 1;
+      }
+      attempt = attempt + 1;  
+  }
+
+  var total = 0;
+  var link = list.first;
+  while (link != null) {
+    total = total + link.value;
+    link = link.next;
+  }
+
+  print("WebAssembly Try!");
+
+  return total;
+}

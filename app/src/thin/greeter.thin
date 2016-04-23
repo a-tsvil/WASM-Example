@@ -1,0 +1,5 @@
+declare function println(text: string): void;
+
+extern function greet(): void {
+    println("Hello World From WebAssembly");
+}

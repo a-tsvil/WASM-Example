@@ -1,0 +1,14 @@
+{
+    "name": "WASM-Example-Application",
+    "version": "0.0.1",
+    "main": "wasm-test.html",
+    "description": "Wasm usage in borwser demonstraton application",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "dependencies": {
+        "express": "~4"
+    },
+    "license": "UNLICENSED"
+}
